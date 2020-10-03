@@ -14,8 +14,10 @@ html{
 header{
   font-size: 1.2rem;
   font-family: 'Open Sans';
+  color: var(--color-hint, #708598);
 }
-body{
+main{
   font-family: 'Open Sans';
   font-size: 1.4rem;
+  color: var(--color-text, #050F19);
 }
