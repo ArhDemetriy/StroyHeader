@@ -2,8 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 110rem;
+  max-width: var(--size-max_width, 110rem);
   margin: 0 auto;
+  padding: 0 min(8.8rem, 5%);
+  background-color: var(--color-bg_grey);
 }
 .header__geo_title {
   display: flex;
@@ -13,4 +15,4 @@
   display: flex;
   gap: 2.4rem;
 }
-/*# sourceMappingURL=header.ce80820b.css.map */
+/*# sourceMappingURL=header.9b63ccea.css.map */

@@ -8,19 +8,26 @@ html {
   --color-green: #0D9B5F;
   --color-red: #E92F2F;
   --color-link: #FED83D;
-  --color-purple: #9B51E0;
+  --color-bg_avatar: #9B51E0;
   --color-stroke: #ECEFF1;
+  --size-max_width: 110rem;
 }
 
 header {
   font-size: 1.2rem;
   font-family: "Open Sans";
   color: var(--color-hint, #708598);
+  background-color: var(--color-bg_grey);
 }
 
 main {
   font-family: "Open Sans";
   font-size: 1.4rem;
   color: var(--color-text, #050F19);
+  background-color: var(--color-bg_white, red);
 }
-/*# sourceMappingURL=base.505cf4ad.css.map */
+
+body {
+  margin: 0;
+}
+/*# sourceMappingURL=base.d0210500.css.map */
