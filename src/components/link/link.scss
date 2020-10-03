@@ -1,0 +1,48 @@
+.link{
+  text-decoration: none;
+  color: inherit;
+  &-dropable{
+    & > .link__text {
+      display: flex;
+      align-items: center;
+      &::after {
+        // font-family: 'Material Icons Round';
+        content: ' ';
+        display: inline-block;
+        width: 0.9rem;
+        height: 0.5rem;
+        margin-left: 0.6rem;
+        // background-color: red;
+        background-image: url('../../components/link/chevron.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    & .link__item {
+      display: none;
+    }
+    & .link__list {
+      position: absolute;
+    }
+    & ,
+    & .link__text,
+    & .link__list {
+      &:hover .link__item {
+        display: list-item;
+      }
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: var(--color-bg_white, white);
+  }
+  &__item {
+    & > a{
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+}

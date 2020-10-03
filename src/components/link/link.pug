@@ -1,0 +1,38 @@
+append styles
+  link(rel='stylesheet', href='../../components/link/link.scss')
+
+append mixins
+  mixin link(options = {}, items = [])
+    -
+      if (!options.items)
+        options.items = [];
+      items = options.items.concat(items);
+      delete options.items;
+    -
+      options.class = options.class ? `link ${options.class}` : `link `;
+      const mod = options.mod ? options.mod.trim().split(/[,\s]\s*/) : [];
+      options.class += options.mod ? ` link-${mod.join(` link-`)} ` : '';
+      delete options.mod;
+      // options.class += options.block_class ? ` ${options.block_class} ` : '';
+      const block_class = options.block_class ? `${options.block_class}` : ``;
+      delete options.block_class;
+      const text = options.text ? options.text : '';
+      delete options.text;
+      const dropable = options.dropable ? true : false;
+      delete options.dropable;
+
+      const tag = items.length > 1 ? 'ul' : 'a';
+
+    if items.length <= 0
+      - options.class += options.block_class ? ` ${options.block_class} ` : '';
+      a()&attributes(options)&attributes(attributes)=text
+    else
+      div.link__container(class=block_class, class= dropable ? 'link-dropable' : '')
+        span.link__text()=text
+        ul.link__list()&attributes(options)&attributes(attributes)
+          each item in items
+            -
+              const text = item.text;
+              delete item.text;
+            li.link__item
+              a()&attributes(item)=text
