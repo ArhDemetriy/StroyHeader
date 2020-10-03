@@ -1,5 +1,5 @@
 append styles
-  link(rel='stylesheet', href='../../../components/header/header.scss')
+  link(rel='stylesheet', href='../../components/header/header.scss')
 
 append mixins
   mixin header(options = {})
@@ -32,3 +32,10 @@ append mixins
       }
 
     div()&attributes(options)&attributes(attributes)
+      .header__geo_title
+        span.header__geo_ico(class='material-icons-outlined')='place'
+        span.header__geo_name='Волгоградская область'
+      nav.header__menu
+        .header__linck='Тендеры'
+        .header__linck='База подрядчиков'
+        .header__linck='Другие сервисы'
