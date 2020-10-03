@@ -1,5 +1,5 @@
 append styles
-  link(rel='stylesheet', href='../../../components/button/button.scss')
+  link(rel='stylesheet', href='../../components/button/button.scss')
 
 append mixins
   mixin button(options = {})
@@ -11,8 +11,8 @@ append mixins
       options.class += options.block_class ? ` ${options.block_class} ` : '';
       const block_class = options.block_class ? `${options.block_class}` : `button`;
       delete options.block_class;
-      const title = options.title ? `${options.title}` : '';
-      delete options.title;
+      const text = options.text ? options.text : 'SET text';
+      delete options.text;
 
       function blockLength(input){
         const open = '\\u003C'
@@ -34,6 +34,7 @@ append mixins
       }
 
     button(type='button')&attributes(options)&attributes(attributes)
-      block
-      if title
-        span.button__title=title
+      if block
+        block
+      if text
+        span.button__title=text
