@@ -37,4 +37,11 @@ append mixins
       }
 
     div()&attributes(options)&attributes(attributes)
-      +button('Каталог')
+      .searching__logo
+      +button({text: 'Каталог', mod:'main'})
+        span(class='material-icons-round')='dehaze'
+      input.searching__search_input(type='text', placeholder='Хочу найти...')
+      +button({text: 'Список', mod:'regular'})
+        span(class='material-icons-round')='article'
+
+      .searching__avatar='А'
