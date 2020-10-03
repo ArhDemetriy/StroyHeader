@@ -15,12 +15,9 @@
   align-items: center;
   position: relative;
 }
-.search__container::after {
-  font-family: "Material Icons Round";
-  content: "search";
-  font-size: 2rem;
+.search__icon {
   position: absolute;
   right: 0;
   margin-right: 1rem;
 }
-/*# sourceMappingURL=search.7b15afa8.css.map */
+/*# sourceMappingURL=search.cd22d54b.css.map */

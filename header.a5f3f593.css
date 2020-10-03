@@ -11,15 +11,32 @@
 .header__geo_title {
   display: flex;
   align-items: center;
+  gap: 0.8rem;
 }
 .header__menu {
   display: flex;
+  align-items: center;
   gap: 2.4rem;
 }
+.header__linck-dropable {
+  display: flex;
+  align-items: center;
+}
 .header__linck-dropable::after {
-  font-family: "Material Icons Round";
-  content: "expand_more";
+  content: " ";
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.5rem;
   margin-left: 0.6rem;
+  background-image: url("chevron.f9f4c835.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.header__dropable_icon {
+  position: absolute;
+  right: 0;
+  margin-left: 4rem;
+  padding-left: 1rem;
 }
 .header__stroke {
   margin: 0;
@@ -29,4 +46,4 @@
   color: var(--color-stroke);
   background-color: var(--color-stroke);
 }
-/*# sourceMappingURL=header.013fd6b4.css.map */
+/*# sourceMappingURL=header.a5f3f593.css.map */
