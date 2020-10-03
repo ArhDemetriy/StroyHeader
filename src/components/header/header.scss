@@ -14,4 +14,11 @@
     display: flex;
     gap: 2.4rem;
   }
+  &__linck-dropable{
+    &::after{
+      font-family: 'Material Icons Round';
+      content: 'expand_more';
+      margin-left: 0.6rem;
+    }
+  }
 }
