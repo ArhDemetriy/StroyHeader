@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 3.2rem;
   max-width: var(--size-max_width, 110rem);
   margin: 0 auto;
   padding: 0 min(8.8rem, 5%);
@@ -9,16 +10,43 @@
   &__geo_title {
     display: flex;
     align-items: center;
+    gap: 0.8rem;
   }
   &__menu{
     display: flex;
+    align-items: center;
+
     gap: 2.4rem;
   }
   &__linck-dropable{
     &::after{
-      font-family: 'Material Icons Round';
-      content: 'expand_more';
+      // font-family: 'Material Icons Round';
+      content: ' ';
+      display: inline-block;
+      width: 0.9rem;
+      height: 0.5rem;
       margin-left: 0.6rem;
+      // background-color: red;
+      background-image: url('../../components/header/chevron.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
     }
+    // position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__dropable_icon{
+    position: absolute;
+    right: 0;
+    margin-left: 4rem;
+    padding-left: 1rem;
+  }
+  &__stroke{
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    border: none;
+    color: var(--color-stroke);
+    background-color: var(--color-stroke);
   }
 }

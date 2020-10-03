@@ -42,8 +42,11 @@ append mixins
     div()&attributes(options)&attributes(attributes)
       +logo()
       +button({text: 'Каталог', mod:'main'})
-        span(class='material-icons-round')='dehaze'
+        img(src='../../components/searching/menu.svg', alt='menu icon')
+        //- span(class='material-icons-round')='dehaze'
       +search({placeholder: 'Хочу найти...', block_class:'searching__search_input'})
       +button({text: 'Список', mod:'regular'})
-        span(class='material-icons-round')='article'
+        img(src='../../components/searching/article.svg', alt='article icon')
+        //- span(class='material-icons-round')='article'
       +avatar()
+    hr.searching__stroke
