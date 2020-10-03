@@ -14,12 +14,12 @@ html{
 }
 header{
   font-size: 1.2rem;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   color: var(--color-hint, #708598);
   background-color: var(--color-bg_grey);
 }
 main{
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.4rem;
   color: var(--color-text, #050F19);
   background-color: var(--color-bg_white, red);
