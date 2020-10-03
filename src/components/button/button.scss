@@ -8,4 +8,15 @@
   align-items: center;
   gap: 1.1rem;
   background-color: var(--color-bg_grey);
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+
+  &-regular{
+    border: 1px solid #ECEFF1;
+  }
+  &-main{
+    background-color: var(--color-link);
+  }
+
 }
