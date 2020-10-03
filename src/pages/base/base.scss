@@ -10,14 +10,20 @@ html{
   --color-link : #FED83D;
   --color-purple : #9B51E0;
   --color-stroke : #ECEFF1;
+  --size-max_width : 110rem;
 }
 header{
   font-size: 1.2rem;
   font-family: 'Open Sans';
   color: var(--color-hint, #708598);
+  background-color: var(--color-bg_grey);
 }
 main{
   font-family: 'Open Sans';
   font-size: 1.4rem;
   color: var(--color-text, #050F19);
+  background-color: var(--color-bg_white, red);
+}
+body{
+  margin: 0;
 }
