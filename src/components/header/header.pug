@@ -33,10 +33,14 @@ append mixins
 
     div()&attributes(options)&attributes(attributes)
       .header__geo_title
-        span.header__geo_ico(class='material-icons-round')='place'
+        //- span.header__geo_ico(class='material-icons-round')='place'
+        img(src='../../components/header/place.svg', alt='place icon')
         span.header__geo_name='Волгоградская область'
       nav.header__menu
         .header__linck='Тендеры'
         .header__linck='База подрядчиков'
         .header__linck.header__linck-dropable='Другие сервисы'
+          //- span=
+          //- img.header__dropable_icon(src='../../components/header/chevron.svg', alt='chevron icon')
+
     hr.header__stroke
