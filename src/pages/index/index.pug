@@ -1,5 +1,6 @@
 extends ../base/base.pug
 include ../../components/header/header.pug
+include ../../components/searching/searching.pug
 
 append styles
   link(rel='stylesheet', href='index.scss')
@@ -9,4 +10,4 @@ block title
 append header
   +header()
 append main
-  .main
+  +searching()
