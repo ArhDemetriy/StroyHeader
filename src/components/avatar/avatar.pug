@@ -1,0 +1,15 @@
+append styles
+  link(rel='stylesheet', href='../../components/avatar/avatar.scss')
+
+append mixins
+  mixin avatar(options = {})
+    -
+      options.class = options.class ? `avatar ${options.class}` : `avatar `;
+      const mod = options.mod ? options.mod.trim().split(/[,\s]\s*/) : [];
+      options.class += options.mod ? ` avatar-${mod.join(` avatar-`)} ` : '';
+      delete options.mod;
+      options.class += options.block_class ? ` ${options.block_class} ` : '';
+      const block_class = options.block_class ? `${options.block_class}` : `avatar`;
+      delete options.block_class;
+
+    div()&attributes(options)&attributes(attributes)='А'
