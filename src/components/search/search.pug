@@ -19,5 +19,6 @@ append mixins
       delete options.dropable;
 
     lable.search__container(class=block_class)&attributes(attributes)
-      input(type='search')&attributes(options)
+      input.search__input(type='search')&attributes(options)
+      img.search__icon(src='../../components/search/search.svg', alt='search icon')
       //- button.search__submit()='Q'
