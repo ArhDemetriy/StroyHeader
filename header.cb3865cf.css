@@ -15,4 +15,9 @@
   display: flex;
   gap: 2.4rem;
 }
-/*# sourceMappingURL=header.9b63ccea.css.map */
+.header__linck-dropable::after {
+  font-family: "Material Icons Round";
+  content: "expand_more";
+  margin-left: 0.6rem;
+}
+/*# sourceMappingURL=header.cb3865cf.css.map */

@@ -1,0 +1,1 @@
+{"mappings":"AAAA;EACE;EACA;EACA;EACA","sources":["./src/components/search/search.scss"],"sourcesContent":[".search{\r\n  border: 1px solid #ECEFF1;\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  min-height: 4rem;\r\n}"],"names":[],"version":3,"file":"search.10a5fe13.css.map"}
