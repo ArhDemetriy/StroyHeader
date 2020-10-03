@@ -1,7 +1,10 @@
 include ../../components/button/button.pug
+include ../../components/logo/logo.pug
+include ../../components/avatar/avatar.pug
+include ../../components/search/search.pug
+
 append styles
   link(rel='stylesheet', href='../../components/searching/searching.scss')
-
 append mixins
   mixin searching(options = {})
     -
@@ -37,11 +40,10 @@ append mixins
       }
 
     div()&attributes(options)&attributes(attributes)
-      .searching__logo
+      +logo()
       +button({text: 'Каталог', mod:'main'})
         span(class='material-icons-round')='dehaze'
-      input.searching__search_input(type='text', placeholder='Хочу найти...')
+      +search({placeholder: 'Хочу найти...', block_class:'searching__search_input'})
       +button({text: 'Список', mod:'regular'})
         span(class='material-icons-round')='article'
-
-      .searching__avatar='А'
+      +avatar()
