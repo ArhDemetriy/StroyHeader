@@ -1,6 +1,7 @@
 .avatar {
-  width: 4rem;
-  height: 4rem;
+  min-width: 4rem;
+  width: max-content;
+  min-height: 4rem;
   background-color: var(--color-bg_avatar, red);
   color: white;
   display: flex;
