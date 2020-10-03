@@ -1,16 +1,18 @@
 append styles
-  link(rel='stylesheet', href='../../components/header/header.scss')
+  link(rel='stylesheet', href='../../components/button/button.scss')
 
 append mixins
-  mixin header(options = {})
+  mixin button(options = {})
     -
-      options.class = options.class ? `header ${options.class}` : `header `;
+      options.class = options.class ? `button ${options.class}` : `button `;
       const mod = options.mod ? options.mod.trim().split(/[,\s]\s*/) : [];
-      options.class += options.mod ? ` header-${mod.join(` header-`)} ` : '';
+      options.class += options.mod ? ` button-${mod.join(` button-`)} ` : '';
       delete options.mod;
       options.class += options.block_class ? ` ${options.block_class} ` : '';
-      const block_class = options.block_class ? `${options.block_class}` : `header`;
+      const block_class = options.block_class ? `${options.block_class}` : `button`;
       delete options.block_class;
+      const text = options.text ? options.text : 'SET text';
+      delete options.text;
 
       function blockLength(input){
         const open = '\\u003C'
@@ -31,11 +33,8 @@ append mixins
         return count;
       }
 
-    div()&attributes(options)&attributes(attributes)
-      .header__geo_title
-        span.header__geo_ico(class='material-icons-round')='place'
-        span.header__geo_name='Волгоградская область'
-      nav.header__menu
-        .header__linck='Тендеры'
-        .header__linck='База подрядчиков'
-        .header__linck.header__linck-dropable='Другие сервисы'
+    button(type='button')&attributes(options)&attributes(attributes)
+      if block
+        block
+      if text
+        span.button__title=text

@@ -1,14 +1,15 @@
 {
   "name": "stroyheader",
   "version": "1.0.0",
-  "description": "frontend_test\u001b[D\u001b[D\u001b[D\u001b[ ",
+  "description": "frontend test",
   "private": true,
   "scripts": {
-    "cleanDist": "rm -rf dist/*",
+    "cleanDistDev": "rm -rf dist/dev/*",
     "cleanCashe": "rm -rf .parcel-cache/*",
-    "parcelBuild": "parcel build src/pages/index/index.pug --no-minify --public-url ./",
-    "parcelDev": "parcel src/pages/index/index.pug",
-    "dev": "npm run cleanCashe && npm run parcelDev"
+    "parcelBuild": "parcel build src/pages/index/index.pug --no-minify --public-url ./ --dist-dir dist/build",
+    "parcelDev": "parcel src/pages/index/index.pug --no-autoinstall --dist-dir dist/dev",
+    "dev": "npm run cleanCashe && npm run parcelDev",
+    "build": "npm run cleanCashe && npm run parcelBuild"
   },
   "repository": {
     "type": "git",

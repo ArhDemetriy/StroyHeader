@@ -1,0 +1,15 @@
+append styles
+  link(rel='stylesheet', href='../../components/logo/logo.scss')
+
+append mixins
+  mixin logo(options = {})
+    -
+      options.class = options.class ? `logo ${options.class}` : `logo `;
+      const mod = options.mod ? options.mod.trim().split(/[,\s]\s*/) : [];
+      options.class += options.mod ? ` logo-${mod.join(` logo-`)} ` : '';
+      delete options.mod;
+      options.class += options.block_class ? ` ${options.block_class} ` : '';
+      const block_class = options.block_class ? `${options.block_class}` : `logo`;
+      delete options.block_class;
+
+    img(src='../../components/logo/logo.svg', alt='stroyportal')&attributes(options)&attributes(attributes)

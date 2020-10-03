@@ -1,0 +1,21 @@
+append styles
+  link(rel='stylesheet', href='../../components/search/search.scss')
+
+append mixins
+  mixin search(options = {})
+    -
+      options.class = options.class ? `search ${options.class}` : `search `;
+      const mod = options.mod ? options.mod.trim().split(/[,\s]\s*/) : [];
+      options.class += options.mod ? ` search-${mod.join(` search-`)} ` : '';
+      delete options.mod;
+      options.class += options.block_class ? ` ${options.block_class} ` : '';
+      const block_class = options.block_class ? `${options.block_class}` : `search`;
+      delete options.block_class;
+      const text = options.text ? options.text : '';
+      delete options.text;
+      const title = options.title ? `${options.title}` : '';
+      delete options.title;
+      const dropable = options.dropable ? true : false;
+      delete options.dropable;
+
+    input(type='text')&attributes(options)&attributes(attributes)

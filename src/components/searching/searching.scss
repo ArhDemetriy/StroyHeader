@@ -1,0 +1,28 @@
+.searching{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--size-max_width, 110rem);
+    margin: 0 auto;
+    padding: 0 min(8.8rem, 5%);
+    gap: 2.4rem;
+    &__logo{
+      width: 221px;
+      height: 48px;
+      background-color: brown;
+    }
+    &__avatar{
+      width: 4rem;
+      height: 4rem;
+      background-color: var(--color-bg_avatar, red);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50vh;
+    }
+    &__search_input{
+      flex-grow: 1;
+    }
+
+}

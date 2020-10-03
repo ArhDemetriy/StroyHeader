@@ -1,0 +1,11 @@
+.avatar {
+  min-width: 4rem;
+  width: max-content;
+  min-height: 4rem;
+  background-color: var(--color-bg_avatar, red);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50vh;
+}
