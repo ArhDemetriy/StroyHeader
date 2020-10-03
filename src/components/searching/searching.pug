@@ -1,0 +1,40 @@
+include ../../components/button/button.pug
+append styles
+  link(rel='stylesheet', href='../../components/searching/searching.scss')
+
+append mixins
+  mixin searching(options = {})
+    -
+      options.class = options.class ? `searching ${options.class}` : `searching `;
+      const mod = options.mod ? options.mod.trim().split(/[,\s]\s*/) : [];
+      options.class += options.mod ? ` searching-${mod.join(` searching-`)} ` : '';
+      delete options.mod;
+      options.class += options.block_class ? ` ${options.block_class} ` : '';
+      const block_class = options.block_class ? `${options.block_class}` : `searching`;
+      delete options.block_class;
+      const text = options.text ? options.text : '';
+      delete options.text;
+      const title = options.title ? `${options.title}` : '';
+      delete options.title;
+
+      function blockLength(input){
+        const open = '\\u003C'
+        const close = '\\u003C'+'\\u002F'
+        let begins = []
+        let ends = []
+        let count = 0
+        for(let i = input.indexOf(open,0); i>=0; i = input.indexOf(open,i+1)){
+          if (input.indexOf(close,i) != i)
+            begins.push(i)
+          else
+            begins.pop();
+          if (begins.length <= 0)
+            count++;
+        }
+        if (count <= 0)
+          count = input.split(');').length - 1;
+        return count;
+      }
+
+    div()&attributes(options)&attributes(attributes)
+      +button('Каталог')
