@@ -1,10 +1,12 @@
 extends ../base/base.pug
-//- include ../../components/timer/timer.pug
+include ../../components/header/header.pug
 
 append styles
   link(rel='stylesheet', href='index.scss')
 block title
-  title='Timers'
+  title='Stroyportal.ru'
 
 append header
+  +header()
+append main
   .main
